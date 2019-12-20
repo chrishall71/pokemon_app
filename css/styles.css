@@ -4,7 +4,7 @@
 
 body {
 	position: relative;
-	background-color: #000000;
+	background-color: black;
 	font-family: Helvetica;
 	line-height: 1.6;
 	font-size: 15px;
@@ -21,8 +21,8 @@ h1 {
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
-	background-color: #d8db03;
-	color: black;
+	background-color: red;
+	color: whitesmoke;
 	overflow: auto;
 }
 
