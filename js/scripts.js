@@ -68,20 +68,23 @@ var pokemonRepository = (function() {
     modalContainer.html ='';
     var modal = $ ('<div class="modal"></div>');
     var closeButtonElement = $('<button class="modal-close"></button>');
-    closeButtonElement.innerText = 'Close';
+    closeButtonElement.html = 'Close';
     closeButtonElement.on('click', hideModal);
 
-    var nameElement = $('<h1></h1>');
-      $(nameElement).text = item.name.charAt(0).toUpperCase() + item.name.slice(1);
+   var nameElement = $('<h1></h1>');
+      //nameElement.text = (item.name.charAt(0).toUpperCase() + item.name.slice(1));
+      
+      nameElement.html(item.name.charAt(0).toUpperCase() + item.name.slice(1));
 
-    var imageElement = $('<img class ="modal-img">');
-     imageElement.src = item.imageUrl;
+    var imageElement = $('<img alt=" ", src="" class="modal-img">');
+     imageElement.attr('src', item.imageUrl);
 
-    var hieghtElement = $('<p></p>');
-    $(hieghtElement).text = 'Type(s): ' + item.types;
+    var heightElement = $('<p></p>');
+     //heightElement.text = 'Type(s): ' + item.height;
+     heightElement.html = 'Type(s): ' + item.height;
 
     var typesElement = $('<p></p>');
-    $(typesElement).text = 'Type(s): ' + item.types;
+    typesElement.html = 'Type(s): ' + item.types;
 
     $(modal).append(closeButtonElement);
     $(modal).append(nameElement);
@@ -97,7 +100,7 @@ var pokemonRepository = (function() {
 		modal.appendChild(typesElement);
     modalContainer.appendChild(modal);*/
     
-    $(modalContainer) = ('is-visible');
+    modalContainer.addClass ('is-visible');
   }
 
   //Funciont to close the modal
