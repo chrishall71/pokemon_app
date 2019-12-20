@@ -66,7 +66,6 @@ var pokemonRepository = (function() {
   
   function showModal (item){
     modalContainer.html ='';
-    var modal = $ ('<div class="modal"></div>');
     var closeButtonElement = $('<button class="modal-close"></button>');
     closeButtonElement.html = 'Close';
     closeButtonElement.on('click', hideModal);
@@ -85,20 +84,14 @@ var pokemonRepository = (function() {
 
     var typesElement = $('<p></p>');
     typesElement.html = 'Type(s): ' + item.types;
-
-    $(modal).append(closeButtonElement);
-    $(modal).append(nameElement);
-    $(modal).append(heightElement);
-    $(modal).append(imageElement);
-    $(modal).append(typesElement);
-    $(modalContainer).append(modal);
-
-    /*modal.appendChild(closeButtonElement);
-		modal.appendChild(nameElement);
-		modal.appendChild(heightElement);
-		modal.appendChild(imageElement);
-		modal.appendChild(typesElement);
-    modalContainer.appendChild(modal);*/
+ 
+    const modal = $('<div class="modal"></div>');
+    modal.append(closeButtonElement);
+    modal.append(nameElement);
+    modal.append(heightElement);
+    modal.append(imageElement);
+    modal.append(typesElement);
+    modalContainer.append(modal);
     
     modalContainer.addClass ('is-visible');
   }
