@@ -15,7 +15,7 @@ body {
 h1 {
 	font-size: bold;
 	font-size: 30px;
-	text-align: center;
+	
 }
 .page-header {
 	margin: 0px;
@@ -24,6 +24,12 @@ h1 {
 	background-color: red;
 	color: whitesmoke;
 	overflow: auto;
+	text-align: center;
+}
+
+.header-image {
+	display:inline-block;
+	margin: 0 auto;
 }
 
 ul {
@@ -63,7 +69,7 @@ ul {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #00000062;
+	background: #0000003b;
 
 	/* To show it above other content */
 	z-index: 999;
@@ -102,6 +108,12 @@ ul {
 
 .modal p {
 	margin-bottom: 0;	
+}
+.modal-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 
 @media all and (max-width: 1310px) {

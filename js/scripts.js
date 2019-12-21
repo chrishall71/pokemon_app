@@ -57,7 +57,7 @@ var pokemonRepository = (function() {
         /* Replaced Fectch With Ajax*/
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
-        item.weight = details.weight;
+        item.types = details.types;
       })
       .catch(function(error) {
         document.write(error);
@@ -65,25 +65,22 @@ var pokemonRepository = (function() {
   }
   
   function showModal (item){
-    modalContainer.html ='';
+    modalContainer.html ('');
     var closeButtonElement = $('<button class="modal-close"></button>');
-    closeButtonElement.html = 'Close';
+    closeButtonElement.html ('Close');
     closeButtonElement.on('click', hideModal);
 
    var nameElement = $('<h1></h1>');
-      //nameElement.text = (item.name.charAt(0).toUpperCase() + item.name.slice(1));
-      
       nameElement.html(item.name.charAt(0).toUpperCase() + item.name.slice(1));
 
     var imageElement = $('<img alt=" ", src="" class="modal-img">');
      imageElement.attr('src', item.imageUrl);
 
-    var heightElement = $('<p></p>');
-     //heightElement.text = 'Type(s): ' + item.height;
-     heightElement.html = 'Type(s): ' + item.height;
+    var heightElement = $('<p> class="height-element</p>');
+     heightElement.html('Height: ' + item.height);
 
     var typesElement = $('<p></p>');
-    typesElement.html = 'Type(s): ' + item.types;
+    typesElement.html ('Element(s): ' + item.types);
  
     const modal = $('<div class="modal"></div>');
     modal.append(closeButtonElement);
