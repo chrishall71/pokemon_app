@@ -57,7 +57,12 @@ var pokemonRepository = (function() {
         /* Replaced Fectch With Ajax*/
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
-        item.types = details.types;
+        item.types = Object.keys(details.types);
+        if (details.types.length === 2){
+          item.types = [details.types[0].type.name, details.types[1].type.name];
+        } else {
+          item.types = [details.types[0].type.name];
+        }
       })
       .catch(function(error) {
         document.write(error);
@@ -73,7 +78,7 @@ var pokemonRepository = (function() {
    var nameElement = $('<h1></h1>');
       nameElement.html(item.name.charAt(0).toUpperCase() + item.name.slice(1));
 
-    var imageElement = $('<img alt=" ", src="" class="modal-img">');
+    var imageElement = $('<img alt=" " src="" class="modal-img">');
      imageElement.attr('src', item.imageUrl);
 
     var heightElement = $('<p> class="height-element</p>');
@@ -98,8 +103,8 @@ var pokemonRepository = (function() {
   modalContainer.removeClass('is-visible');
   }  
   // Press escape key to close modal
-  window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+  $(window).on('keydown', function (event) {
+  if (event.key === 'Escape' && modalContainer.hasClass('is-visible')) {
       hideModal();
     }
   });
@@ -108,7 +113,7 @@ var pokemonRepository = (function() {
 modalContainer.on('click', function (event) {
  // Since this is also triggered when clicking INSIDE the modal
  // I only want the modal to close if the user clicks directly on the overlay
- var target = event.target;
+
  if (event.target === this) {
    hideModal();
  }
