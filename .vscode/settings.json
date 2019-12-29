@@ -1,4 +1,6 @@
 {
 	"eslint.lintTask.enable": true,
-	"php.validate.run": "onType"
+	"php.validate.run": "onType",
+	"editor.formatOnSave": true,
+	"prettier.singleQuote": true
 }

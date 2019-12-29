@@ -1,78 +1,77 @@
 * {
-	box-sizing: border-box;
-	}
+  box-sizing: border-box;
+}
 
 body {
-	position: relative;
-	background-color: black;
-	font-family: Helvetica;
-	line-height: 1.6;
-	font-size: 15px;
-	min-height: 100%;
-	padding-bottom: 10rem;
+  position: relative;
+  background-color: black;
+  font-family: Helvetica;
+  line-height: 1.6;
+  font-size: 15px;
+  min-height: 100%;
+  padding-bottom: 10rem;
 }
 
 .modal-header {
-	background-color: #3a5ca7;
-	color:#ffcb05;
+  background-color: #3a5ca7;
+  color: #ffcb05;
 }
 
 #navbar {
- background-color: red;
+  background-color: red;
 }
 
 .page-container {
-	margin-top: 125px;
+  margin-top: 125px;
 }
 
 #button-style {
-	background-color: lightgrey;
-	border: none;
-	margin: 5px;
-	color: #181818de;
-	padding: 5px;
-	text-align: center;
-	display: inline-block;
-	font-size: 20px;
-	border-radius: 5px ;
-	width: 250px;
-	cursor: pointer;
+  background-color: lightgrey;
+  border: none;
+  margin: 5px;
+  color: #181818de;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 250px;
+  cursor: pointer;
 }
 
 .modal p {
-	margin-bottom: 0;	
+  margin-bottom: 0;
 }
 .modal-img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 @media all and (max-width: 1310px) {
-	ul {
-	  	grid-template-columns: 1fr 1fr 1fr;
-	}
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
-  
+
 @media all and (max-width: 1080px) {
-	ul {
-	  grid-template-columns: 1fr 1fr 1fr;
-	}
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
-  
+
 @media all and (max-width: 800px) {
-	ul {
-		grid-template-columns: 1fr 1fr;
-	}
-	h1 {
-	  	font-size: 20px;
-	}
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+  h1 {
+    font-size: 20px;
+  }
 }
-  
+
 @media all and (max-width: 540px) {
-	ul {
-	  	grid-template-columns: 1fr;
-	}
+  ul {
+    grid-template-columns: 1fr;
+  }
 }
-  
