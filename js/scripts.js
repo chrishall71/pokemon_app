@@ -15,19 +15,6 @@ var pokemonRepository = (function() {
     });
   }
 
-  /*function addListItem(pokemon) {
-    var pokemonList = $('.pokemon-list'); 
-    //JQuery List Item & Button Tags Together with CSS-Class Styles 
-    var listItem = $('<li></li>');
-    var listButton = $('<button class="button-style"></button>');
-    $(listButton).text(pokemon.name);
-    $(listItem).append(listButton);
-    $(pokemonList).append(listItem);
-    listButton.on('click', function() {
-      showDetails(pokemon);
-    });
-  }*/
-
   //Function used to show details of each Pokemon
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function() {
@@ -97,7 +84,7 @@ var pokemonRepository = (function() {
       var value = $(this)
         .val()
         .toLowerCase();
-      $('.pokemon-list').filter(function() {
+      $('.pokemon-list button').filter(function() {
         $(this).toggle(
           $(this)
             .text()
