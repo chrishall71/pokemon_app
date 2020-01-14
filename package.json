@@ -1,0 +1,26 @@
+{
+	"name": "pokemon_app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^2.16.0",
+		"@typescript-eslint/parser": "^2.16.0",
+		"eslint": "^6.8.0"
+	},
+	"scripts": {
+		"lint": "eslint",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chrishall71/star-wars-app.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/chrishall71/star-wars-app/issues"
+	},
+	"homepage": "https://github.com/chrishall71/star-wars-app#readme"
+}
